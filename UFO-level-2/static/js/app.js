@@ -6,9 +6,10 @@ var table = d3.select("table");
 var tbody = d3.select("tbody");
 var button = d3.select("#filter-btn");
 var reset_button = d3.select("#reset-btn");
+var selector = d3.select("#selector");
 
 function row_app(data){
-    data.map( item => {
+    data.map( item => { 
 
 
         var row = tbody.append("tr");
@@ -30,8 +31,6 @@ function runEnter() {
 
     var inputElement = d3.select("#datetime");
     var inputValue = inputElement.property("value");
-
-    var selector = d3.select("#selector");
     var item_select = selector.property("value");
 
     tbody.text("");
@@ -71,10 +70,26 @@ function runEnter() {
 
 }
 
+function change() {
+    var placeHolder = d3.select("#datetime");
+    var text = selector.property("value");
+    
+    if (text == "Date") {
+        placeHolder.attr("placeholder","mm/dd/yyyy");
+    } else {
+        placeHolder.attr("placeholder","Insert value");
+    }
+}
+
 reset_button.on("click", rset => {
     tbody.text("");
     row_app(tableData);
+    d3.select("#datetime").property("value", "");
+    change()
 });
+
 button.on("click", runEnter);
+
+selector.on("change", change)
 
 row_app(tableData);
