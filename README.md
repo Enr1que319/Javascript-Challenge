@@ -49,5 +49,17 @@ Example:
       }
     ]
 
+Using multiple input tags and/or select dropdowns, users can set multiple filters and search for UFO sightings using the following criteria based on the table columns:
 
-- [UFO Finder](https://enr1que319.github.io/Javascript-Challenge/index.html "UFO")
+- date/time
+- city
+- state
+- country
+- shape
+
+You can reach the web page here: [UFO Finder](https://enr1que319.github.io/Javascript-Challenge/index.html "UFO")
+
+## Screenshots
+
+[![](img/1.png)]() 
+
