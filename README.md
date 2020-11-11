@@ -15,5 +15,39 @@ The following tools were used to developed the web page
 + HTML
 + CSS
 
+## Data
+
+### Schema
+
+|      Column     |  Data Type |
+| --------------- | -----------|
+|    datetime     | `datetime` |
+|      city       |  `string`  |
+|      state      |  `string`  |
+|     country     |  `string`  |
+|      shape      |  `string`  |
+| durationMinutes |  `string`  |
+
+
+- datetime         -> Date of the sighting
+- city             -> City of the sight
+- state            -> State of the sight
+- country          -> Country of the sight
+- shape            -> Shape of the sight
+- durationMinutes  -> Duration of the sight
+
+Example:
+
+    [ 
+      {
+        "datetime": "1/13/2010",
+        "city": "white oak",
+        "state": "pa",
+        "country": "us",
+        "shape": "triangle",
+        "durationMinutes": "30 seconds",
+      }
+    ]
+
 
 - [UFO Finder](https://enr1que319.github.io/Javascript-Challenge/index.html "UFO")
